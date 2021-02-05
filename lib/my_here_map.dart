@@ -34,7 +34,7 @@ class _MyHereMapState extends State<MyHereMap> {
   void initState() {
     Geolocator.getCurrentPosition().then((currloc) async {
       setState(() {
-        _currentPosition = GeoCoordinates(-6.835010, 108.227674);
+        _currentPosition = GeoCoordinates(currloc.latitude, currloc.longitude);
       });
     });
     super.initState();
